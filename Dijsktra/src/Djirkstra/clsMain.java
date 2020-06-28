@@ -15,26 +15,33 @@ public class clsMain implements maxInteger {
     public static void main(String[] args) throws Exception {
 
         Scanner input = new Scanner(System.in); //System in as a standard input stream
-
+        String startPoint;
+        String dest;
 
 
         ArrayList<clsEdge<String>> distance = initialize().getValue();
         ArrayList<clsVertex<String>> nodes = initialize().getKey();
 
+        System.out.println("Do you want to start the test case (Frankfurt to Munich?) \nIf not, you can select your desired start- and endpoint. \n[y/n] \n");
+        String testCase = input.nextLine();
+        if(testCase.equals("y")){
+            startPoint = "Frankfurt";
+            dest = "Muenchen";
+
+        }
+        else{
         System.out.println("Please input your startNode and destination. \nThe following nodes are available for selection: \n");
         printArrayList(nodes);
         System.out.println("\nstartingNode: (The city have to start with a capital letter!)");
-        String startPoint = input.nextLine();
-        clsVertex<String> startNode = getStartingPoint(startPoint, nodes);
+        startPoint = input.nextLine();
         System.out.println("\ndestination: (The city have to start with a capital letter!)");
-        String dest = input.nextLine();
+        dest = input.nextLine();
+        }
         clsVertex<String> destination = getDestination(dest,nodes);
+        clsVertex<String> startNode = getStartingPoint(startPoint, nodes);
 
 
-
-
-
-        if(startNode == destination)            //if the destination equals the startinPoint, we do not have to compute dijsktra and can save performance
+        if(startNode == destination)            //if the destination equals the startingPoint, we do not have to compute dijsktra and can save performance
             throw new Exception("You are already at the destination. There is no need for travel");
 
 
