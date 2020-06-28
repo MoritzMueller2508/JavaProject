@@ -17,7 +17,6 @@ public class clsMain {
 
     public static void main(String[] args) throws IOException, GeneralSecurityException {
 
-        //inputPath();
 
         List<Event> eventsOut = clsCalendarEvents.getEvents(dateTimeParserMin(args[1]), dateTimeParserMax(args[2]));
 
@@ -33,6 +32,9 @@ public class clsMain {
          */
 
         String filter = regExParser(args[3]);
+
+        if(clsFilter.filter(eventsOut,filter).size()==0)
+            throw new Error("unfortunately, we are not able to find any upcoming events with your desired specification.");
 
         clsCalendarEvents.addEvent( clsFilter.filter(eventsOut,filter), events);
 
@@ -93,30 +95,9 @@ public class clsMain {
     }
 
 
-    /** Description of inputPath
-     *
-     * With this method, your are able to select a specific path for export.
-     * If you do not want to, the file will be exported to your working directory
-     *
-     */
-    private static void inputPath(){
-        System.out.println("Do you want to specify the path where your .ics file will be exported to? [y/n] \nIf not, the file will be saved in your working directory");
-        Scanner scanner = new Scanner(System.in);
 
-        String yn = scanner.nextLine();
 
-        while(yn.equals("y")) { //check, if the input is y, if not, the main will continue
 
-            path = yn;
-
-            File dir = new File(path); //check, if the input is a valid path
-            if (!dir.exists())
-                System.out.println("The given path is wrong, you want to try again? [y/n]");
-
-            yn = scanner.nextLine();
-        }
-
-    }
 
 
 }

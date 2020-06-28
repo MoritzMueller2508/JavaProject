@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fb6649e-33a7-4222-a201-4cdbde8b5518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Dijsktra/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dijsktra/JavaHausarbeitII.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/help.ics" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/BuildUp_iCal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/clsCalendarEvents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/clsExport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/clsFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/clsMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dijsktra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dijsktra/JavaHausarbeit.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dijsktra/out/artifacts/JavaHausarbeit_jar/JavaHausarbeit.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/out/artifacts/JavaHausarbeitII_jar/JavaHausarbeitII.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dijsktra/out/production/JavaHausarbeitII/Djirkstra/clsMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/out/production/JavaHausarbeitII/Djirkstra/clsMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/help.ics" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clsMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,63 +86,60 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
-  <component name="RunManager" selected="Gradle.GoogleCalendar [run --args=&quot;clsMain.java 2020-06-20 2020-06-30 *Help* help.ics&quot;]">
-    <configuration name="GoogleCalendar [run --args=DHBW**HAHA*]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.GoogleCalendar [jar]">
+    <configuration name="GoogleCalendar [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="run" />
-            <option value="--args=DHBW**HAHA*" />
+            <option value="build" />
           </list>
         </option>
-        <option name="vmOptions" value="" />
+        <option name="vmOptions" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GoogleCalendar [run --args=&quot;clsMain.java 2020-06-20 2020-06-30 *Help* contexttt.ics&quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GoogleCalendar [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="run" />
-            <option value="--args=&quot;clsMain.java 2020-06-20 2020-06-30 *Help* contexttt.ics&quot;" />
+            <option value="clean" />
           </list>
         </option>
-        <option name="vmOptions" value="" />
+        <option name="vmOptions" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GoogleCalendar [run --args=&quot;clsMain.java 2020-06-20 2020-06-30 *Help* help.ics]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GoogleCalendar [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="run" />
-            <option value="--args=&quot;clsMain.java 2020-06-20 2020-06-30 *Help* help.ics" />
+            <option value="jar" />
           </list>
         </option>
-        <option name="vmOptions" value="" />
+        <option name="vmOptions" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
@@ -186,37 +164,32 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GoogleCalendar [run --args=clsMain.java 2020-06-20 2020-06-30 *Help* help.ics]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GoogleCalendar [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="run" />
-            <option value="--args=clsMain.java" />
-            <option value="2020-06-20" />
-            <option value="2020-06-30" />
-            <option value="*Help*" />
-            <option value="help.ics" />
+            <option value="testClasses" />
           </list>
         </option>
-        <option name="vmOptions" value="" />
+        <option name="vmOptions" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GoogleCalendar [build]" />
+        <item itemvalue="Gradle.GoogleCalendar [testClasses]" />
+        <item itemvalue="Gradle.GoogleCalendar [jar]" />
+        <item itemvalue="Gradle.GoogleCalendar [clean]" />
         <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;clsMain.java 2020-06-20 2020-06-30 *Help* help.ics&quot;]" />
-        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;clsMain.java 2020-06-20 2020-06-30 *Help* contexttt.ics&quot;]" />
-        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;clsMain.java 2020-06-20 2020-06-30 *Help* help.ics]" />
-        <item itemvalue="Gradle.GoogleCalendar [run --args=clsMain.java 2020-06-20 2020-06-30 *Help* help.ics]" />
-        <item itemvalue="Gradle.GoogleCalendar [run --args=DHBW**HAHA*]" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +211,8 @@
       <workItem from="1593117671767" duration="250000" />
       <workItem from="1593123158556" duration="4798000" />
       <workItem from="1593259610490" duration="7017000" />
-      <workItem from="1593342970964" duration="11470000" />
+      <workItem from="1593342970964" duration="13264000" />
+      <workItem from="1593361573227" duration="1030000" />
     </task>
     <servers />
   </component>
@@ -249,6 +223,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="669" y="122" key="#GoogleCalendar_[jar]" timestamp="1593361952704">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="669" y="122" key="#GoogleCalendar_[jar]/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593361952704" />
     <state x="586" y="198" key="#Inspections" timestamp="1593103840539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -266,30 +244,34 @@
     </state>
     <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593107816649" />
     <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1440.0.1440.860@0.0.1920.1040" timestamp="1593004706497" />
-    <state x="707" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1593114970050">
+    <state x="707" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1593361770958">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="707" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593114970050" />
+    <state x="707" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593361770958" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1593355978284">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593355978284" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1593263565808">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593263565808" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1593354693867">
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1593362448035">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593354693867" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1593354693867">
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593362448035" />
+    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1593362448035">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593354693867" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1593354693867">
+    <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593362448035" />
+    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1593362448035">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593354693867" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1593354693867">
+    <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593362448035" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1593362448035">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593354693867" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593362448035" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1593114573725">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -314,5 +296,20 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="378" key="scopes/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593115051596" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1593355009305">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593355009305" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/clsMain.java</url>
+          <line>71</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
