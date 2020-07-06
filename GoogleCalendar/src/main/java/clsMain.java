@@ -31,7 +31,10 @@ public class clsMain {
          *  System.out.println("filter is"+ filter);
          */
 
+
         String filter = regExParser(args[3]);
+
+
 
         if(clsFilter.filter(eventsOut,filter).size()==0)
             throw new Error("unfortunately, we are not able to find any upcoming events with your desired specification.");
@@ -86,6 +89,9 @@ public class clsMain {
      */
     private static String regExParser(String str){
         String s = "";
+        if (str.equals("xxxx"))
+            str = "*";
+
         if (str.contains("*"))
             s = str.replace("*", ".*");
         else
