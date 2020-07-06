@@ -1,11 +1,10 @@
 import com.google.api.client.util.DateTime;
 import com.google.api.services.calendar.model.Event;
-import java.io.File;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+
 
 
 public class clsMain {
@@ -31,17 +30,12 @@ public class clsMain {
          *  System.out.println("filter is"+ filter);
          */
 
-        System.out.println("----------------------\n" +args[0]);
-           System.out.println(args[1]);
-           System.out.println(args[2]);
-           System.out.println(args[3]+"\n ------------------------");
 
 
 
 
 
         String filter = regExParser(args[2]);
-        System.out.println("filter is"+ filter);
 
 
         if(clsFilter.filter(eventsOut,filter).size()==0)
