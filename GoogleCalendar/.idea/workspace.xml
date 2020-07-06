@@ -91,7 +91,7 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
-  <component name="RunManager" selected="Gradle.GoogleCalendar [run --args=&quot;2020-06-06 2020-08-01 xxxx tst.ics&quot;]">
+  <component name="RunManager" selected="Gradle.GoogleCalendar [jar]">
     <configuration name="GoogleCalendar [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -104,6 +104,25 @@
         <option name="taskNames">
           <list>
             <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GoogleCalendar [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -126,26 +145,6 @@
           </list>
         </option>
         <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="GoogleCalendar [run --args=&quot;2020-06-06 2020-08-01 xxxx tst.ics&quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="run" />
-            <option value="--args=&quot;2020-06-06 2020-08-01 xxxx tst.ics&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
@@ -192,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;clsMain 2020-06-06 2020-08-01 xxxx tst.ics&quot;]" />
-        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;clsMain 2020-06-06 2020-08-01 Ja* tst.ics&quot;]" />
-        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;2020-06-06 2020-08-01 xxxx tst.ics&quot;]" />
         <item itemvalue="Gradle.GoogleCalendar [jar]" />
         <item itemvalue="Gradle.GoogleCalendar [build]" />
+        <item itemvalue="Gradle.GoogleCalendar [clean]" />
+        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;clsMain 2020-06-06 2020-08-01 xxxx tst.ics&quot;]" />
+        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;clsMain 2020-06-06 2020-08-01 Ja* tst.ics&quot;]" />
       </list>
     </recent_temporary>
   </component>
