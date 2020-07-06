@@ -123,6 +123,7 @@ public class clsCalendarEvents {
             String location;
             String summary;
             String description;
+            String classx;
 
             if(e.getLocation()==null)
                   location= "";
@@ -139,6 +140,12 @@ public class clsCalendarEvents {
             else
                 description = e.getDescription();
 
+            if(e.getLocked()==null)
+                classx = "";
+            else
+                classx = Boolean.toString(e.getLocked());
+
+
 
 
             String tmp = //add the information to the ArrayList events
@@ -147,6 +154,7 @@ public class clsCalendarEvents {
                 "LOCATION:"+location + lS +
                 "SUMMARY:"+summary + lS+
                 "DESCRIPTION:"+description+lS+
+                "CLASS:" + classx + lS +
                 "DTSTART:"+timeParser(e.getStart().toString()) +lS+
                 "DTEND:"+timeParser(e.getEnd().toString()) +lS+
                 "END:VEVENT"
