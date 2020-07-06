@@ -16,7 +16,7 @@ public class clsExport<T> implements BuildUp_iCal {
      *  A new file is created and the information are added to the file
      *
      *
-     * @param fileName  specifies the name of the file (args[4])
+     * @param fileName  specifies the name of the file (args[3])
      * @param pathName  specifies the path of the file (path selected or workingDirecory)
      * @param events    all events which have to be added
      */

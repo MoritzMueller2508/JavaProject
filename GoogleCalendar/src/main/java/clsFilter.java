@@ -9,7 +9,7 @@ public class clsFilter {
     /** Description of filter
      *
      *  This method returns an ArrayList, only with the desired events
-     *  The events are filtered by the provides SelectionCriteria in clsMain (args[3])
+     *  The events are filtered by the provides SelectionCriteria in clsMain (args[2])
      *  Filter uses the String with the formatted regEx expressions (by clsMain.regExParser())
      *
      * @param aL

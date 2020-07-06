@@ -18,22 +18,30 @@ public class clsMain {
     public static void main(String[] args) throws IOException, GeneralSecurityException {
 
 
-        List<Event> eventsOut = clsCalendarEvents.getEvents(dateTimeParserMin(args[1]), dateTimeParserMax(args[2]));
+        List<Event> eventsOut = clsCalendarEvents.getEvents(dateTimeParserMin(args[0]), dateTimeParserMax(args[1]));
 
-        /** debugging only (printing args[0] - args[4] + filter)
+        /** debugging only (printing args[0] - args[3] + filter)
          *
          *  System.out.println("----------------------\n" +args[0]);
          *  System.out.println(args[1]);
          *  System.out.println(args[2]);
-         *  System.out.println(args[3]);
-         *  System.out.println(args[4] + "\n ------------------------");
+         *  System.out.println(args[3]+ "\n ------------------------"););
+         *
          *
          *  System.out.println("filter is"+ filter);
          */
 
+        System.out.println("----------------------\n" +args[0]);
+           System.out.println(args[1]);
+           System.out.println(args[2]);
+           System.out.println(args[3]+"\n ------------------------");
 
-        String filter = regExParser(args[3]);
 
+
+
+
+        String filter = regExParser(args[2]);
+        System.out.println("filter is"+ filter);
 
 
         if(clsFilter.filter(eventsOut,filter).size()==0)
@@ -53,7 +61,7 @@ public class clsMain {
 
 
         clsExport<String> exporter = new clsExport<>();
-        exporter.export(args[4],path,events);
+        exporter.export(args[3],path,events);
 
 
     }

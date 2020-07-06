@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fb6649e-33a7-4222-a201-4cdbde8b5518" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tokens/StoredCredential" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tst.ics" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clsExport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clsExport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clsFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clsMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tokens/StoredCredential" beforeDir="false" afterPath="$PROJECT_DIR$/tokens/StoredCredential" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +91,7 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
-  <component name="RunManager" selected="Gradle.GoogleCalendar [jar]">
+  <component name="RunManager" selected="Gradle.GoogleCalendar [run --args=&quot;2020-06-06 2020-08-01 xxxx tst.ics&quot;]">
     <configuration name="GoogleCalendar [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -102,25 +104,6 @@
         <option name="taskNames">
           <list>
             <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="GoogleCalendar [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -147,7 +130,7 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GoogleCalendar [run --args=&quot;clsMain 2020-06-01 2020-08-01 xxxx tst.ics&quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="GoogleCalendar [run --args=&quot;2020-06-06 2020-08-01 xxxx tst.ics&quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -159,7 +142,27 @@
         <option name="taskNames">
           <list>
             <option value="run" />
-            <option value="--args=&quot;clsMain 2020-06-01 2020-08-01 xxxx tst.ics&quot;" />
+            <option value="--args=&quot;2020-06-06 2020-08-01 xxxx tst.ics&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GoogleCalendar [run --args=&quot;clsMain 2020-06-06 2020-08-01 Ja* tst.ics&quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="run" />
+            <option value="--args=&quot;clsMain 2020-06-06 2020-08-01 Ja* tst.ics&quot;" />
           </list>
         </option>
         <option name="vmOptions" value="" />
@@ -189,11 +192,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;clsMain 2020-06-06 2020-08-01 xxxx tst.ics&quot;]" />
+        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;clsMain 2020-06-06 2020-08-01 Ja* tst.ics&quot;]" />
+        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;2020-06-06 2020-08-01 xxxx tst.ics&quot;]" />
         <item itemvalue="Gradle.GoogleCalendar [jar]" />
         <item itemvalue="Gradle.GoogleCalendar [build]" />
-        <item itemvalue="Gradle.GoogleCalendar [clean]" />
-        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;clsMain 2020-06-06 2020-08-01 xxxx tst.ics&quot;]" />
-        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;clsMain 2020-06-01 2020-08-01 xxxx tst.ics&quot;]" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +220,7 @@
       <workItem from="1593259610490" duration="7017000" />
       <workItem from="1593342970964" duration="13264000" />
       <workItem from="1593361573227" duration="1991000" />
-      <workItem from="1594061286547" duration="4899000" />
+      <workItem from="1594061286547" duration="6461000" />
     </task>
     <servers />
   </component>
@@ -236,10 +239,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="586" y="198" key="#Inspections/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593103840539" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593087131342">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594067515376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593087131342" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594067515376" />
     <state x="701" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1593115908690">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -253,6 +256,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="354" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593361770958" />
+    <state x="499" y="88" key="CommitChangelistDialog2" timestamp="1594068406582">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="499" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594068406582" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1593355978284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -261,22 +268,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593263565808" />
-    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1594063495709">
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1594068458556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594063495709" />
-    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1594063495709">
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594068458556" />
+    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1594068458556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594063495709" />
-    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1594063495709">
+    <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594068458556" />
+    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1594068458556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594063495709" />
-    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1594063495709">
+    <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594068458556" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1594068458556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594063495709" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594068458556" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1594064367238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -293,10 +300,10 @@
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
     <state x="-1353" y="0" width="1369" height="717" maximized="true" key="dock-window-2/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593127965548" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1593351512393">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1594068005589">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593351512393" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594068005589" />
     <state x="752" y="378" key="scopes" timestamp="1593115051596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -305,16 +312,5 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593355009305" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/clsMain.java</url>
-          <line>77</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
