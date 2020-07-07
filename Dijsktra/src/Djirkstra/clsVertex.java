@@ -40,4 +40,6 @@ public class clsVertex<T> {
         System.out.println(getBefore().getName());
 
     }
+
+
 }

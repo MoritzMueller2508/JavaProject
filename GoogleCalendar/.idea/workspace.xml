@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7fb6649e-33a7-4222-a201-4cdbde8b5518" name="Default Changelist" comment="" />
+    <list default="true" id="7fb6649e-33a7-4222-a201-4cdbde8b5518" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Dijsktra/.gradle/6.1.1/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dijsktra/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dijsktra/.gradle/6.1.1/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dijsktra/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dijsktra/.gradle/vcs-1/gc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dijsktra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clsMain.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +86,7 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JavaHausarbeitII/Laura" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -214,6 +224,8 @@
       <workItem from="1593361573227" duration="1991000" />
       <workItem from="1594061286547" duration="6461000" />
       <workItem from="1594068544905" duration="2475000" />
+      <workItem from="1594071046603" duration="195000" />
+      <workItem from="1594074391662" duration="118000" />
     </task>
     <servers />
   </component>
@@ -257,26 +269,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593355978284" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1593263565808">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1594071239353">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1593263565808" />
-    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1594071022661">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594071239353" />
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1594071240738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594071022661" />
-    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1594071022661">
+    <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594071240738" />
+    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1594071240738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594071022661" />
-    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1594071022661">
+    <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594071240738" />
+    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1594071240738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594071022661" />
-    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1594071022661">
+    <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594071240738" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1594071240738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594071022661" />
+    <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1920.1040/-1440.0.1440.860/-3360.0.1920.1040@0.0.1920.1040" timestamp="1594071240738" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1594064367238">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

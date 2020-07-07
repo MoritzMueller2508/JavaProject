@@ -91,7 +91,7 @@ public class clsMain {
      */
     private static String regExParser(String str){
         String s = "";
-        if (str.equals("xxxx"))
+        if (str.equals("xxxx")) //if the input is "xxxx", then every event will be displayed
             str = "*";
 
         if (str.contains("*"))

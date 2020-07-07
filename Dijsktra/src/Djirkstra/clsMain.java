@@ -4,14 +4,23 @@
 package Djirkstra;
 
 import javafx.util.Pair;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
 
 public class clsMain implements maxInteger {
 
-
+    /** Description of public static void main
+     *
+     * first, the program asks you, if you want to run the testcase.
+     * Depending on your answer, the test case will be executed.
+     *
+     * After that, you will be asked, what your start and destination should be.
+     * After your answer, the question, the basic Djikstra_Algorithmn
+     *
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
 
         Scanner input = new Scanner(System.in); //System in as a standard input stream
@@ -85,7 +94,8 @@ public class clsMain implements maxInteger {
 
             vertexObjects.add(new clsVertex<String>(city.toString(), integerMaxValue));
 
-        } /**
+        }
+        /**
          for (clsVertex object: vertexObjects //for debug purpose only
          ) { object.printVertex();
 
