@@ -137,12 +137,6 @@ public class clsDijkstraManager<T> implements maxInteger {
     }
 
 
-    public ArrayList<clsVertex<T>> returnVisted(){
-        return visited;
-
-    } //just to access visited in the main
-
-            
 }
         
 
