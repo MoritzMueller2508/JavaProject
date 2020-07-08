@@ -25,7 +25,7 @@ public class clsFilter {
          ) {if (event.getSummary()!=null)
              summary = event.getSummary();
 
-             if(summary.matches(s))
+             if(summary.matches(s) || summary.contains(s))
                  newEvents.add(event);
 
     }
