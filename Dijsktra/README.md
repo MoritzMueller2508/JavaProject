@@ -1,4 +1,6 @@
 # Dokumentation des Djikstra-Algorithmus
+***Diese Dokumentation wurde in Markdown verfasst, um sie im GitReposity als Readme einzubinden***\
+***Es wird empfohlen, diese Readme auch im GitReposity zu betrachten: https://github.com/MoritzMueller2508/JavaProject***
 
 -------------
 

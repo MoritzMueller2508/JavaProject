@@ -1,0 +1,348 @@
+<!DOCTYPE html []>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MarkdownViewer++" />
+    <title>README.md</title>
+    <style type="text/css">
+            
+/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
+
+        </style>
+  </head>
+  <body>
+    <h1 id="dokumentation-des-googlecalendars">Dokumentation des GoogleCalendars</h1>
+    <hr />
+    <h2 id="installation-und-ausfuhrung">Installation und Ausführung</h2>
+    <p>Zum Starten des Programms ist die GoogleCalendar-1.0.jar auszuführen, welche unter<br /><em>/JavaHausarbeit/GoogleCalendar/build/libs/GoogleCalendar-1.0.jar gespeichert ist</em>.</p>
+    <p>Zum Ausführen müssen folgende Argumente der .jar übergeben werden, in folgender Reihenfolge:</p>
+    <p>
+      <em>
+        <strong>java -jar GoogleCalendar-1.0.jar &lt;Start-Datum&gt;  &lt;Ende-Datum&gt; &lt;Text-Selektionskriterium&gt; &lt;Dateiname&gt;</strong>
+      </em>
+    </p>
+    <p>Hierbei muss gelten:</p>
+    <ul>
+      <li>Die Daten müssen in folgendem Format angegeben werden: <strong>"yyyy-MM-dd"</strong></li>
+      <li>Als Text-Selektionskriterium können RegEx-Ausdrücke genutzt werden. Sollen jedoch alle Events im angegeben Zeitraum ausgegeben werden, so muss als Text-Selektionskriterium "xxxx" angegeben werden <em>( '*' ist nicht zulässig)</em><ul><li>Sollte das Text-Selektionskriterium keinem regEx-Ausdruck oder "xxxx" entsprechen, werden alle Events ausgegeben, welche das Text-Selektionskriterium im Titel <strong>enthalten</strong></li></ul></li>
+      <li>Der Dateiname muss auf .ics enden</li>
+    </ul>
+    <p>Als Ergebnis der Eingabe ruft das Programm die GoogleCalendarAPI auf und exportiert alle im Zeitraum liegenden Events, welche dem Text-Selektionskriterium entsprechen, in eine .ics Datei mit gegebenen Dateinamen.<br />
+Beim ersten Ausführen des Programms wird der Nutzer aufgefordert, sich mit seinem Google-Konto anzumelden und der API Zugriff auf den GoogleCalendar zu gewähren.<br />
+Diese .ics Datei kann nun in einen Kalender eingebunden/importiert werden.</p>
+    <hr />
+    <h2 id="importieren-der.ics-datei-in-den-googlecalendar">Importieren der .ics Datei in den GoogleCalendar</h2>
+    <p>
+      <em>
+        <strong>Zum importieren der neu erstellten .ics Datei in den GoogleCalendar, bitte folgendem "Tutorial" der Google-Dokumentation folgen:</strong>
+      </em>
+      <a href="https://support.google.com/calendar/answer/37118?co=GENIE.Platform%3DDesktop&amp;hl=de">https://support.google.com/calendar/answer/37118?co=GENIE.Platform%3DDesktop&amp;hl=de</a>
+    </p>
+    <hr />
+    <hr />
+    <h2 id="genutzte-versionen">Genutzte Versionen</h2>
+    <p>
+      <em>Diese Informationen sind direkt aus IntelliJ übernommen (Sprache Englisch)</em>
+    </p>
+    <ul>
+      <li>ProjectSDK: 1.8</li>
+      <li>javac version "1.8.0_241"</li>
+      <li>java version "1.8.0_241"</li>
+      <li>Java(TM) SE Runtime Environment (build 1.8.0_241-b07)</li>
+      <li>Java HotSpot(TM) 64-Bit Server VM (build 25.241-b07, mixed mode)</li>
+      <li>ProjectLanguageLevel: "8 - Lambdas, type annotations etc."</li>
+      <li>Gradle: 6.3</li>
+      <li>Kotlin: 1.3.70</li>
+      <li>Groovy: 2.5.10</li>
+      <li>Ant: Apache Ant(TM) version 1.10.7 compiled on September 1 2019</li>
+      <li>JVM: 1.8.0_241 (Oracle Corporation 25.241-b07)</li>
+      <li>OS: Windows 10 10.0 amd64exit</li>
+      <li>Libraries:
+<ul><li>Gradle: com.fasterxml.jackson.core:jackson-core:2.1.3</li><li>Gradle: com.google.api-client:google-api-client:1.23.0</li><li>Gradle: com.google.apis:google-api-services-calendar:v3-rev305-1.23.0</li><li>Gradle: com.google.code.findbugs:jsr305:1.3.9</li><li>Gradle: com.google.guava:guava-jdk5:17.0</li><li>Gradle: com.google.http-client:google-http-client-jackson2:1.23.0</li><li>Gradle: com.google.http-client:google-http-client:1.23.0</li><li>Gradle: com.google.oauth-client:google-oauth-client-java6:1.23.0</li><li>Gradle: com.google.oauth-client:google-oauth-client-jetty:1.23.0</li><li>Gradle: com.google.oauth-client:google-oauth-client:1.23.0</li><li>Gradle: commons-codec:commons-codec:1.3</li><li>Gradle: commons-logging:commons-logging:1.1.1</li><li>Gradle: org.apache.httpcomponents:httpclient:4.0.1</li><li>Gradle: org.apache.httpcomponents:httpcore:4.0.1</li><li>Gradle: org.mortbay.jetty:jetty-util:6.1.26</li><li>Gradle: org.mortbay.jetty:jetty:6.1.26</li><li>Gradle: org.mortbay.jetty:servlet-api:2.5-20081211</li></ul></li>
+    </ul>
+    <hr />
+    <hr />
+    <h2 id="methode">Methode</h2>
+    <p>
+      <em>Quellen werden in einem weiteren Abschnitt später aufgelistet</em>
+    </p>
+    <p>Im Nachfolgenden werden zuerst die Grundsätze der genutzten GoogleCalendarAPI erörtert, anschließend wird auf das allgemeine Programm eingegangen.</p>
+    <blockquote>
+      <p>
+        <em>"The Calendar API is a REST API that can be accessed through explicit HTTP calls or via the Google Client Libraries; the API exposes most of the features available in the Google Calendar Web interface."</em>
+      </p>
+    </blockquote>
+    <hr />
+    <h3 id="kalender">Kalender</h3>
+    <p>Ein Kalender, welcher von der GoogleCalendarAPI bereitgestellt wurde ist eine Kollektion von Events, zusammen mit weiteren Metadaten, wie eine Zusammenfassung, die standart Zeitzone,
+den Ort etc. Jeder Kalender ist durch eine ID definiert, welche als Email dargestellt wird. Weiterhin kann ein Email von mehreren Person gleichzeitig genutzt werden.</p>
+    <hr />
+    <h3 id="events">Events</h3>
+    <p>Ein Event ist ein spezifisches Objekt, welches ein Datum oder eine Zeitangabe enthält. Events besitzen eine eindeutige ID innerhalb eines Kalenders.
+Weiterhin können Events weitere Daten, neben einem Start-Datum und Ende-Datum, enthalten, wie z.B eine Zusammenfassung, eine Beschreibung etc.</p>
+    <p>Es gibt zwei Arten von Events:</p>
+    <ul>
+      <li>Ein einfaches Event, welches einmal innerhalb eines Kalenders auftritt</li>
+      <li>Ein wiederholendes Event, welches mehrfach innerhalb eines Kalenders auftritt. Z.B wöchentliche Meetings.</li>
+    </ul>
+    <p>Ein Event tritt in einem spezifischen Zeitraum auf, welcher duch ein Datum und eine Zeitangabe defniert ist. Dies nennt man ein "time-Event".<br />
+Dennoch kann ein Event einen vollständigen Tag belegen. Dies nennt man ein "all-day-Event"</p>
+    <hr />
+    <h3 id="authentifizierung">Authentifizierung</h3>
+    <blockquote>
+      <p>
+        <em>"Jedes Event muss einenen Autorisierungstoken enthalten, welcher das Programm für die GoogleCalendarAPI identifiziert um so eine Anfrage an den Kalender zu senden."</em>
+      </p>
+    </blockquote>
+    <p>Dies erfolgt durch das erste Aufrufen des Programms. Dadurch wird der Nutzer aufgefordert, sich bei seinem GoogleAccount anzumelden und seinen GoogleKalender für das Programm freizugeben.</p>
+    <hr />
+    <h3 id="zusammenfassung">Zusammenfassung</h3>
+    <p>Zusammenfassend für die GoogleCalendarAPI können wir also annehmen, dass durch das erstmalige Einloggen und freigeben des GoogleKalenders,
+nun auf Informationen aus dem Kalender zugegriffen werden können, wodurch Informationen, wie Events, abrufbar sind, um diese im Programm weiter zu verarbeiten.</p>
+    <p>Genau dies nutzen wir im Programm, um unsere Events, welche mit dem Text-Selektionskriterium übereinstimmen, in einer .ics Datei zu exportieren.</p>
+    <hr />
+    <hr />
+    <h2 id="das.ics-format">Das .ics Format</h2>
+    <p>Eine .ics Datei muss eine grundlegende Formatierung umsetzten.
+Der Beginn einer .ics Datei besteht aus dem Indikator, dass der Kalender nun beginnt (<em>BEGIN:VCALENDAR</em>),
+der Version der Datei (<em>VERSION:2.0</em>),
+der PROID (<em>PROID:Moritz_iCalProject</em>), welche die Instanz angibt, welche die .ics Datei erstellt hat,
+und der Methode (<em>METHOD:PUBLISH</em>), welche die Art angibt, wie die Datei an den Nutzer übermittelt wird.</p>
+    <p>Ein Event muss immer folgende Syntax erfüllen:</p>
+    <ul>
+      <li>BEGIN:VEVENT</li>
+      <li>UID: "Unique ID des Events"</li>
+      <li>LOCATION: "Ort des Events" <em>- kann null sein</em></li>
+      <li>SUMMARY: "Titel des Events"</li>
+      <li>DESCRIPTION: "Beschreibung des Events" <em>- kann null sein</em></li>
+      <li>CLASS: "Parameter, ob das Event öffentlich oder Privat ist" <em>- kann null sein</em></li>
+      <li>DTSTART: "Start des Kalendereintrags"</li>
+      <li>DTEND: "Ende des Kalendereintrags"</li>
+      <li>END:VEVENT <em>- Ende des Events</em></li>
+    </ul>
+    <p>Die Datei endet mit "END:VCALENDAR"</p>
+    <p>Beispiel:</p>
+    <p>
+      <img src="https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/icsFile.png" alt=".icsFile" title=".icsFile" />
+    </p>
+    <hr />
+    <hr />
+    <h2 id="funktionsweise-des-programms">Funktionsweise des Programms</h2>
+    <p>Die Grundidee des Programms ist es, die Events eines GoogleKalenders zu importieren, zu filtern und in eine .ics Datei zu exportieren.
+Hierbei werden zuerst alle Events, welche die eingegebene Zeitangabe erfüllen, aus dem Kalender importiert.
+Anschließend werden die importierten Events mit Hilfe des Text-Selektionskriterium lokal gefiltert.
+Abschließend werden die gefilterten Events in eine .ics Datei exportiert.</p>
+    <hr />
+    <hr />
+    <h2 id="programmdokumentation">Programmdokumentation</h2>
+    <p>
+      <strong>In diesem Abschnitt wird auf den Ablauf des allgemeinen Programms eingegangen</strong>
+    </p>
+    <p>
+      <em>Kleinschrittigere Beschreibungen können innerhalb des Quellcodes als ausführliche Kommentare gefunden werden</em>
+    </p>
+    <hr />
+    <h3 id="clscalendarevents">clsCalendarEvents</h3>
+    <p>Um genau zu sein, ist die Klasse clsCalendarEvents eine Kopie der CalendarQuickstart.java File, welche zur Einbindung der GoogleCalendarAPI genutzt wurde.
+Jedoch wurde diese Klasse mit weiteren Methoden ergänzt.
+Um das Programm nicht aus der CalendarQuickstart.java Klasse zu starten, wurde in diesem Projekt eine clsMain erstellt, welche nun die einzelnen Klassen verwaltet, sowie die Methoden der Klassen zur richtigen Zeit aufruft.</p>
+    <hr />
+    <h3 id="programmablauf">Programmablauf</h3>
+    <p>Bei Ausführung des Programms wird die Methode clsMain.main aufgerufen. Die erste Aktion dieser Methode ist das Aufrufen der Methode clsCalendarEvents.getEvents, welche als Parameter sowohl den Beginn, als auch den Endzeitpunkt des zu importierenden Zeitraums benötigt.
+Diese gibt eine ArrayList mit allen Events im genannten Zeitraum zurück.</p>
+    <p>Anschließend wird das Text-Selektionskriterium aufgerufen und über die Methode regExParser zu einem String umgewandetl, welcher regEx-Ausdrücke unterstützt.<br />
+Hierbei muss der Character '*' durch den String ".*" ersetzt werden.</p>
+    <p>Darauf hin werden die zuvor importierten Events mit Hilfe des Text-Selektionskriterium gefiltert und durch ein clsExport-Objekt in eine .ics Datei exportiert.
+Die Entscheidung ein clsExport-Objekt zu erstellen, beruht darauf, dass die Klasse clsExport mit <em>Generics</em> arbeitet.<br />
+Ohne das Erstellen eines neuen clsExport-Objekts war es nicht möglich, diese Klasse generisch aufzubauen.</p>
+    <hr />
+    <h3 id="anmerkung-zum-interface">Anmerkung zum Interface</h3>
+    <p>Das Interface <em><strong>BuildUp_iCal</strong></em> wurde verwendet, da die Aufgabenstellung es gefordert hat.
+Es implementiert eine ArrayList&lt;String&gt;, welche den Beginn der .ics Datei enthält.<br />
+Die Klasse clsExport nutzt dieses Interface, um den Anfang der .ics Datei zu erstellen.</p>
+    <hr />
+    <hr />
+    <h1 id="implementationsanmerkungen">Implementationsanmerkungen</h1>
+    <h2 id="klassen">Klassen</h2>
+    <p>
+      <strong>Jede Methode ist im Quellcode ausführlich beschrieben. Für genauere Informationen wird somit auf den Quellcode verwiesen!</strong>
+    </p>
+    <hr />
+    <p>
+      <em>
+        <strong>clsMain</strong>
+      </em>
+    </p>
+    <ul>
+      <li>Die Klasse clsMain wurde erstellt, um den Import von Events, das Filtern und den Export der .ics Datei kontrolliert aufzurufen.<br />
+Ursprünglich wurde das Programm über die CalendarQuickstart.java Klasse gestartet. Allerdings war dies zu unübersichtlich.</li>
+      <li>Die statische Variable path wurde implementiert, um eventuell im späteren Verlauf des Projekts eine Möglichkeit zu implementieren, den Speicherort der .ics Datei zu bestimmen.
+Aus Zeitgründen wurde diese Idee allerdings verworfen. Da die Variable path jedoch den Pfad zum "workingDirectory" darstellt, wurde sie als Parameter in das Objekt der clsExport übergeben.</li>
+    </ul>
+    <hr />
+    <p>
+      <em>
+        <strong>clsFilter</strong>
+      </em>
+    </p>
+    <ul>
+      <li>Die Klasse clsFilter implementiert den Filter, mit dem die importierten Events lokal gefiltert werden, um dem Text-Selektionskriterium zu entsprechen.</li>
+    </ul>
+    <hr />
+    <p>
+      <em>
+        <strong>clsExport</strong>
+      </em>
+    </p>
+    <ul>
+      <li>Die Klasse clsExport exportiert alle gefilterten Events in eine .ics Datei.</li>
+      <li>Die Klasse clsExport implementiert das Interface BuildUp_iCal, mit dem die Anfangsdaten der .ics Datei bereitgestellt werden.</li>
+      <li>Hierbei wird erst eine leere Datei erstellt, welche anschließend durch einen Filewriter beschrieben wird.</li>
+      <li>Durch die Aufteilung in die Methoden zum Schreiben der Daten, wird das Konzept von DivideAndConquer angewendet, um das Programm möglichst übersichtlich zu halten.</li>
+    </ul>
+    <hr />
+    <p>
+      <em>
+        <strong>clsCalendarEvents</strong>
+      </em>
+    </p>
+    <ul>
+      <li>Eine Kopie der CalendarQuickstart.java Klasse mit weiteren Methoden und kleineren Änderungen.
+<ul><li>Für weitere Informationen verweise ich auf den dokumentierten Quellcode <br />
+(<em>line 28-35 _ Description of changes made to the ClandarQuickstart.java</em>)</li></ul></li>
+    </ul>
+    <hr />
+    <p>
+      <em>
+        <strong>CalendarQuickstart</strong>
+      </em>
+    </p>
+    <ul>
+      <li>Um die Vollständigkeit zu wahren, wurde die CalendarQuickstart.java, welche zum Aufsetzten der GoogleCalendarAPI benötigt wurde, im Projekt beibehalten.</li>
+    </ul>
+    <hr />
+    <h2 id="interface">Interface</h2>
+    <p>
+      <em>
+        <strong>BuildUp_iCal</strong>
+      </em>
+    </p>
+    <ul>
+      <li>Das genutzte Interface implementiert den Anfang der .ics Datei als ArrayList&lt;String&gt;</li>
+      <li>Es wird in der clsExport Klasse implementiert, in welcher über die ArrayList iteriert wird, um die darin enthaltenen Daten mit Hilfe eines Filewriters in die zu exportierende Datei zu schreiben</li>
+    </ul>
+    <hr />
+    <hr />
+    <h1 id="versionen">Versionen</h1>
+    <p>
+      <strong>Git Commit History</strong>
+      <br />
+      <em>jeder blau gefärbte commit entspricht einer eigentständigen Version des Programms</em>
+      <br />
+      <img src="https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/CommitHistoryGC.png" alt="CommitHistory" title="CommitHistory" />
+    </p>
+    <hr />
+    <hr />
+    <h2 id="testdokumentation">Testdokumentation</h2>
+    <p>
+      <em>Mit der finalen Version des Programms wurde eine .ics Datei erstellt.</em>
+      <br />
+      <em>Die Bilder zeigen, wie die .ics Datei aufgebaut ist sowie die Implementierung in die Windows-CalendarApp</em>
+    </p>
+    <p>
+      <img src="https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/EinbindenCalendar.png" alt="importCalendarApp" title="ImportCalendarApp" />
+    </p>
+    <p>
+      <img src="https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/icsFile.png" alt=".icsFile" title=".icsFile" />
+    </p>
+    <hr />
+    <hr />
+    <h1 id="uml-diagramme">UML-Diagramme</h1>
+    <h2 id="klassendiagramm">Klassendiagramm</h2>
+    <p>
+      <em>Das hier aufgezeigte Klassendiagram enthält weiterhin alle Packages, welche im Projekt enthalten sind</em>
+    </p>
+    <p>
+      <img src="https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/ClassDG.png" alt="ClassDiagram" title="ClassDiagram" />
+    </p>
+    <hr />
+    <h2 id="dependencies-diagramm">Dependencies Diagramm</h2>
+    <p>
+      <em>Das hier aufgezeigte Diagramm enthält alle Dependencies, welche von Gradle genutzt wurde</em>
+    </p>
+    <p>
+      <img src="https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/GradleDependencies.png" alt="Dependencies" title="Dependencies" />
+    </p>
+    <hr />
+    <h2 id="aktivitatsdiagramm">Aktivitätsdiagramm</h2>
+    <h2 id="activity">
+      <img src="https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/ActivityDG.png" alt="Activity" title="Activity" />
+    </h2>
+    <h2 id="usecase-diagramm">UseCase Diagramm</h2>
+    <p>
+      <img src="https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/UseCaseDG.png" alt="UseCase" title="UseCase" />
+    </p>
+    <hr />
+    <hr />
+    <h1 id="auflistung-aller-klassen">Auflistung aller Klassen</h1>
+    <h2 id="clsmain">clsMain</h2>
+    <ul>
+      <li>Attribute:
+<ul><li>public static ArrayList&lt;String&gt; events = new ArrayList&lt;&gt;()</li><li>public static String path = System.getProperty("user.dir")</li></ul></li>
+      <li>Methoden:
+<ul><li>public static void main(String[] args) throws IOException, GeneralSecurityException</li><li>private static DateTime dateTimeParserMin(String str)</li><li>private static DateTime dateTimeParserMax(String str)</li><li>private static String regExParser(String str)</li></ul></li>
+    </ul>
+    <hr />
+    <h2 id="clsfilter">clsFilter</h2>
+    <ul>
+      <li>Methoden:
+<ul><li>public static ArrayList&lt;Event&gt; filter(List&lt;Event&gt; aL, String s)</li></ul></li>
+    </ul>
+    <hr />
+    <h2 id="clsexportt-implements-buildup_ical">clsExport&lt;T&gt; implements BuildUp_iCal</h2>
+    <ul>
+      <li>Methoden:
+<ul><li>public void export(String fileName, String pathName, ArrayList&lt;T&gt; events)</li><li>private void writeBasicData(String pathName, String fileName)</li><li>public void writeEvents(String pathName, String fileName, ArrayList&lt;T&gt; events) throws IOException</li><li>public void writeEnd(String pathName, String fileName) throws IOException</li></ul></li>
+    </ul>
+    <hr />
+    <h2 id="clscalendarevents-1">clsCalendarEvents</h2>
+    <ul>
+      <li>Attribute:
+<ul><li>private static final String APPLICATION_NAME = "Google Calendar API Java Quickstart"</li><li>private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance()</li><li>private static final String TOKENS_DIRECTORY_PATH = "tokens"</li><li>private static final List&lt;String&gt; SCOPES = Collections.singletonList(CalendarScopes.CALENDAR_READONLY)</li><li>private static final String CREDENTIALS_FILE_PATH = "/credentials.json"</li></ul></li>
+      <li>Methoden:
+<ul><li>private static Credential getCredentials(final NetHttpTransport HTTP_TRANSPORT) throws IOException</li><li>public static List&lt;Event&gt; getEvents(DateTime timeMin, DateTime timeMax) throws IOException, GeneralSecurityException</li><li>public static void addEvent(ArrayList&lt;Event&gt; eventsOut, ArrayList&lt;String&gt; events)</li><li>public static String timeParser(String dT_time)</li></ul></li>
+    </ul>
+    <hr />
+    <h2 id="calendarquickstart">CalendarQuickstart</h2>
+    <blockquote>
+      <p>
+        <strong>Um die Vollständigkeit zu wahren, blieb die CalendarQuickstart.java, welche zum Aufsetzten der GoogleCalendarAPI benötigt wurde, im Projekt enthalten.</strong>
+      </p>
+    </blockquote>
+    <hr />
+    <h1 id="auflistung-der-interfaces">Auflistung der Interfaces</h1>
+    <h2 id="buildup_ical">BuildUp_iCal</h2>
+    <ul>
+      <li>Attribute:
+<ul><li>ArrayList&lt;String&gt; buildUp = new ArrayList&lt;String&gt;()</li></ul></li>
+    </ul>
+    <h2 id="quellen">Quellen</h2>
+    <ul>
+      <li>
+        <a href="https://developers.google.com/calendar">https://developers.google.com/calendar</a>
+      </li>
+      <li>
+        <a href="https://praxistipps.chip.de/ics-datei-erstellen-das-muessen-sie-beim-aufbau-beachten_98011">https://praxistipps.chip.de/ics-datei-erstellen-das-muessen-sie-beim-aufbau-beachten_98011</a>
+      </li>
+      <li>
+        <a href="https://www.kanzaki.com/docs/ical/dateTime.html">https://www.kanzaki.com/docs/ical/dateTime.html</a>
+      </li>
+      <li>
+        <a href="https://support.google.com/calendar/answer/37118?co=GENIE.Platform%3DDesktop&amp;hl=de">https://support.google.com/calendar/answer/37118?co=GENIE.Platform%3DDesktop&amp;hl=de</a>
+      </li>
+    </ul>
+  </body>
+</html>

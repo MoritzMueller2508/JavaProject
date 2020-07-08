@@ -1,4 +1,7 @@
 # Dokumentation des GoogleCalendars
+***Diese Dokumentation wurde in Markdown verfasst, um sie im GitReposity als Readme einzubinden***\
+***Es wird empfohlen, diese Readme auch im GitReposity zu betrachten: https://github.com/MoritzMueller2508/JavaProject***
+
 
 -------------
 
@@ -21,6 +24,9 @@ Hierbei muss gelten:
 Als Ergebnis der Eingabe ruft das Programm die GoogleCalendarAPI auf und exportiert alle im Zeitraum liegenden Events, welche dem Text-Selektionskriterium entsprechen, in eine .ics Datei mit gegebenen Dateinamen.\
 Beim ersten Ausführen des Programms wird der Nutzer aufgefordert, sich mit seinem Google-Konto anzumelden und der API Zugriff auf den GoogleCalendar zu gewähren.\
 Diese .ics Datei kann nun in einen Kalender eingebunden/importiert werden.
+
+Anders als die geforderte Herangehensweise, wird das Programm in diesem Fall über eine executable.jar file aufgerufen, da, aufgrund der Beschaffenheit des Gradle-Projekts, das Aufrufen über die geforderte Herangehensweise nicht möglich ist.\
+Dafür entschuldige ich mich.
 
 -------------
 
@@ -270,6 +276,13 @@ Aus Zeitgründen wurde diese Idee allerdings verworfen. Da die Variable path jed
 *Das hier aufgezeigte Diagramm enthält alle Dependencies, welche von Gradle genutzt wurde*
 
 ![Dependencies](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/GradleDependencies.png "Dependencies")
+
+-------------
+## Aktivitätsdiagramm
+![Activity](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/ActivityDG.png "Activity")
+-------------
+## UseCase Diagramm
+![UseCase](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/UseCaseDG.png "UseCase")
 
 
 -------------
