@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7fb6649e-33a7-4222-a201-4cdbde8b5518" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="7fb6649e-33a7-4222-a201-4cdbde8b5518" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +84,7 @@
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
-  <component name="RunManager" selected="Gradle.GoogleCalendar [run]">
+  <component name="RunManager" selected="Gradle.GoogleCalendar [jar]">
     <configuration name="GoogleCalendar [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -100,6 +97,25 @@
         <option name="taskNames">
           <list>
             <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GoogleCalendar [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -146,26 +162,6 @@
       <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GoogleCalendar [run --args=&quot;2020-07-01 2020-08-01 xxxx tst.ics&quot;]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="run" />
-            <option value="--args=&quot;2020-07-01 2020-08-01 xxxx tst.ics&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="GoogleCalendar [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -186,19 +182,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;2020-06-01 2020-08-01 Ja tst.ics&quot;]" />
+      <item itemvalue="Gradle.GoogleCalendar [run]" />
+      <item itemvalue="Gradle.GoogleCalendar [clean]" />
       <item itemvalue="Gradle.GoogleCalendar [build]" />
       <item itemvalue="Gradle.GoogleCalendar [jar]" />
-      <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;2020-06-01 2020-08-01 Ja tst.ics&quot;]" />
-      <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;2020-07-01 2020-08-01 xxxx tst.ics&quot;]" />
-      <item itemvalue="Gradle.GoogleCalendar [run]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GoogleCalendar [run]" />
-        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;2020-06-01 2020-08-01 Ja tst.ics&quot;]" />
-        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;2020-07-01 2020-08-01 xxxx tst.ics&quot;]" />
         <item itemvalue="Gradle.GoogleCalendar [jar]" />
         <item itemvalue="Gradle.GoogleCalendar [build]" />
+        <item itemvalue="Gradle.GoogleCalendar [clean]" />
+        <item itemvalue="Gradle.GoogleCalendar [run]" />
+        <item itemvalue="Gradle.GoogleCalendar [run --args=&quot;2020-06-01 2020-08-01 Ja tst.ics&quot;]" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +224,7 @@
       <workItem from="1594074391662" duration="118000" />
       <workItem from="1594152099843" duration="9692000" />
       <workItem from="1594204355093" duration="1067000" />
-      <workItem from="1594217175519" duration="1570000" />
+      <workItem from="1594217175519" duration="2173000" />
     </task>
     <servers />
   </component>
