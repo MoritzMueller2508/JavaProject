@@ -68,6 +68,8 @@ Anschließend wird "min" aus "Edges" entfernt, da nun die kleinstmögliche Dista
 
 main Method:
 
+	initialize(Startknoten)
+
 	while Edges nicht leer:
 		min: Knoten mit kleinstem Weg
 		entferne min aus Edges					// min = Knoten mit kleinster Distanz
@@ -84,6 +86,15 @@ update_distance(Knoten min, Knoten neig):
 	falls( (alternativ) < (Wert von min) ):
 		Wert von neig = alternativ
 		Vorgänger von neig = min
+		
+initialize(Knoten Startknoten):
+
+		für jeden Knoten k, der im Graph enthalten ist:
+			setzte Wert von k = unendlich
+			setzte Vorgänger von k = null
+		
+		setzte Wert von Startknoten = 0
+		Edges := Die Menge aller Knoten, die im Graph enthalten sind
 	
 Idealerweiße kann man diesen Algorithmus mit Hilfe einer Prioritätswarteschlange implementieren - Der Einfachheit wurde dies in diesem Beispiel jedoch nicht getan
 
@@ -268,6 +279,12 @@ Das Programm ist nun fertig und muss neugestartet werden.
 	- int integerMaxValue = Integer.MAX_VALUE
 
 -------------------------
+-------------------------
+
+# Quellen
+
+- https://www-m9.ma.tum.de/graph-algorithms/spp-dijkstra/index_de.html
+- https://de.wikipedia.org/wiki/Dijkstra-Algorithmus
 
 # JavaProjectWork
 

@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fb6649e-33a7-4222-a201-4cdbde8b5518" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../PicturesDocumentation/GC/icsFile.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dijsktra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dijsktra/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clsFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tokens/StoredCredential" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tst.ics" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,6 +228,7 @@
       <workItem from="1594074391662" duration="118000" />
       <workItem from="1594152099843" duration="9692000" />
       <workItem from="1594204355093" duration="1067000" />
+      <workItem from="1594217175519" duration="1570000" />
     </task>
     <servers />
   </component>

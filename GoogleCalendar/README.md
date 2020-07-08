@@ -15,6 +15,7 @@ Zum Ausführen müssen folgende Argumente der .jar übergeben werden, in folgend
 Hierbei muss gelten:
 - Die Daten müssen in folgendem Format angegeben werden: **"yyyy-MM-dd"**
 - Als Text-Selektionskriterium können RegEx-Ausdrücke genutzt werden. Sollen jedoch alle Events im angegeben Zeitraum ausgegeben werden, so muss als Text-Selektionskriterium "xxxx" angegeben werden *( '\*' ist nicht zulässig)*
+	- Sollte das Text-Selektionskriterium keinem regEx-Ausdruck oder "xxxx" entsprechen, werden alle Events ausgegeben, welche das Text-Selektionskriterium im Titel **enthalten**
 - Der Dateiname muss auf .ics enden
 
 Als Ergebnis der Eingabe ruft das Programm die GoogleCalendarAPI auf und exportiert alle im Zeitraum liegenden Events, welche dem Text-Selektionskriterium entsprechen, in eine .ics Datei mit gegebenen Dateinamen.\
@@ -132,7 +133,9 @@ Ein Event muss immer folgende Syntax erfüllen:
 Die Datei endet mit "END:VCALENDAR"
 
 
-Beispiel: ***ADD ICAL FILE PICTURE***!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Beispiel:
+
+![.icsFile](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/icsFile.png ".icsFile")
 
 -------------
 -------------
@@ -234,19 +237,40 @@ Aus Zeitgründen wurde diese Idee allerdings verworfen. Da die Variable path jed
 -------------
 -------------
 # Versionen
-**Git Commit History**
-## Insert Commit History!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+**Git Commit History**\
+*jeder blau gefärbte commit entspricht einer eigentständigen Version des Programms*\
+![CommitHistory](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/CommitHistoryGC.png "CommitHistory")
 
 -------------
 -------------
 
 ## Testdokumentation
-### ToDo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 *Mit der finalen Version des Programms wurde eine .ics Datei erstellt.*\
 *Die Bilder zeigen, wie die .ics Datei aufgebaut ist sowie die Implementierung in die Windows-CalendarApp*
 
-- Insert Picture for implementation in the Calendar APP
-- Insert .ics File
+![importCalendarApp](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/EinbindenCalendar.png "ImportCalendarApp")
+
+![.icsFile](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/icsFile.png ".icsFile")
+
+
+-------------
+-------------
+
+# UML-Diagramme
+
+## Klassendiagramm
+
+*Das hier aufgezeigte Klassendiagram enthält weiterhin alle Packages, welche im Projekt enthalten sind*
+
+![ClassDiagram](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/ClassDG.png "ClassDiagram")
+
+-------------
+## Dependencies Diagramm
+
+*Das hier aufgezeigte Diagramm enthält alle Dependencies, welche von Gradle genutzt wurde*
+
+![Dependencies](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/GC/GradleDependencies.png "Dependencies")
+
 
 -------------
 -------------
@@ -296,7 +320,7 @@ Aus Zeitgründen wurde diese Idee allerdings verworfen. Da die Variable path jed
 -------------
 	
 ## CalendarQuickstart
-- Um die Vollständigkeit zu wahren, wurde die CalendarQuickstart.java, welche zum Aufsetzten der GoogleCalendarAPI benötigt wurde, im Projekt beibehalten.
+>**Um die Vollständigkeit zu wahren, blieb die CalendarQuickstart.java, welche zum Aufsetzten der GoogleCalendarAPI benötigt wurde, im Projekt enthalten.**
 
 -------------
 
@@ -305,7 +329,6 @@ Aus Zeitgründen wurde diese Idee allerdings verworfen. Da die Variable path jed
 ## BuildUp_iCal
 - Attribute:
 	- ArrayList\<String> buildUp = new ArrayList\<String>()
-
 
 
 
