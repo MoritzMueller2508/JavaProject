@@ -1,5 +1,5 @@
 # Dokumentation des Djikstra-Algorithmus
-***Diese Dokumentation wurde in Markdown verfasst, um sie im GitReposity als Readme einzubinden***\
+***Diese Dokumentation wurde in Markdown verfasst, um sie im GitReposity als Readme einzubinden.***\
 ***Es wird empfohlen, diese Readme auch im GitReposity zu betrachten: https://github.com/MoritzMueller2508/JavaProject***
 
 -------------
@@ -35,17 +35,17 @@ Befehl zum Ausführung über die Konsole:\
 
 Das Programm, welches als Hausarbeit abgegeben wurde, basiert auf dem Dijkstra-Algorithmus.
 Der Dijkstra-Algorithmus ist ein Algorithmus, welcher zur Familie der Greedy Algorithmen zählt und nach seinem Erfinder Edsger W. Dijkstra benannt wurde.
-Dieser löst das Kürzeste-Wege Problem, bzw. das berechnen des kürzesten Pfades für einen gegebenen Startknoten.
+Dieser löst das Kürzeste-Weg Problem, bzw. das Berechnen des kürzesten Pfades für einen gegebenen Startknoten.
 
 Der eigentliche Algorithmus berechnet den kürzesten Weg für alle Pfade ab einem beliebigen Startknoten. 
 In der hier dargestellten Version wird jedoch weiterhin eine Methode zur Bestimmung des kürzesten Pfades zu einem Zielknoten implementiert.
 
 Angenommen wird, dass ein ungerichteter Graph gegeben ist, welcher aus Knoten und Kanten, welche zwei Knoten verbindet, besteht.
-Dabei besitzen die Kanten immer eine Gewichtung, womit der Algorithmus arbeit.
+Dabei besitzen die Kanten immer eine Gewichtung, womit der Algorithmus arbeitet.
 
 -------------------------
 
-### Funktionsweiße des Algorithmus
+### Funktionsweise des Algorithmus
 
 Die Grundidee des Algorithmus ist es, immer der Kante zu folgen, welche dem kürzesten Streckenabschnitt vom Startknoten aus entspricht.
 Andere Kanten werden erst dann verfolgt, wenn keine kürzeren Wege mehr existieren. Dies gewährleistet, dass immer der kürzeste Weg zu einem Knoten, relativ
@@ -56,10 +56,10 @@ Die Distanz/der Wert von Knoten kann sich im Laufe des Algorithmus verändern, n
 
 ### Pseudocode
 
-Um den Algorithmus zu implementieren werden Mengen definiert. Die Menge "Edges" enthält alle Knoten, zu den  noch kein kürzester Weg gefunden wurde.
-Um den Vorgänger zu einem Knoten zu speichern, enthält ein Knoten das Attribut "Vorgänger", welches wieder ein anderer Knoten ist. \
+Um den Algorithmus zu implementieren werden Mengen definiert. Die Menge "Edges" enthält alle Knoten, zu den noch kein kürzester Weg gefunden wurde.
+Um den Vorgänger zu einem Knoten zu speichern, enthält die Klasse der Knoten das Attribut "Vorgänger", welches wieder ein anderer Knoten ist. \
 Zu Beginn wird ein Graph initialisiert, welcher aus Knoten und Kanten, welche zwei Knoten durch eine gewichtete "Strecke" verbinden, besteht.
-Weiterhin wird der Startknoten definiert, von dem der Algorithmus relativ abläuft,
+Weiterhin wird der Startknoten, von welchem der Algorithmus relativ abläuft, definiert,
 wobei der Wert des Startknotens 0 ist, die Werte aller anderen Knoten jedoch, vorerst, als unendlich definiert sind. Vorgänger sind zu diesem Zeitpunkt noch nicht bestimmt.
 
 
@@ -98,13 +98,13 @@ initialize(Knoten Startknoten):
 		setzte Wert von Startknoten = 0
 		Edges := Die Menge aller Knoten, die im Graph enthalten sind
 	
-Idealerweiße kann man diesen Algorithmus mit Hilfe einer Prioritätswarteschlange implementieren - Der Einfachheit wurde dies in diesem Beispiel jedoch nicht getan
+Idealerweiße kann man diesen Algorithmus mit Hilfe einer Prioritätswarteschlange implementieren - Um es einfach zu halten, wurde dies in diesem Beispiel jedoch nicht auf diese Weise implementiert.
 
 -------------------------
 -------------
 # Programmierdokumentation
 
-**In diesem Abschnitt wird nicht auf den generellen Algorithmus eingegangen, sondern auf spezieller Designentscheidungen, da sich der Algorithmus nicht ändert und formal im Internet bereitsteht.**
+**In diesem Abschnitt wird nicht auf den generellen Algorithmus eingegangen, sondern auf spezielle Designentscheidungen, da der Algorithmus unveränderbar ist und formal im Internet bereitsteht.**
 
 *Kleinschrittigere Beschreibungen können innerhalb des Quellcodes als ausführliche Kommentare gefunden werden* 
 
@@ -112,6 +112,7 @@ Idealerweiße kann man diesen Algorithmus mit Hilfe einer Prioritätswarteschlan
 Bei Ausführen des Programms wird zuerst abgefragt, ob der Testcase ausgeführt werden soll. Gibt man hier nichts ein und Enter wird gedrückt, wird standartmäßig "no" als Antwort verwendet.
 
 ![initialStatement](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/Dijkstra/testCase.png "initialStatement")
+
 Wird "y" ausgewählt, so wird der Testcase ausgeführt. Bei jeder anderen Eingabe wird in den Standartmodus gewechselt. Nach dem Testcase ist das Programm fertig und muss neu ausgeführt werden.
 
 Anschließend werden alle zur Auswahl stehenden Städte aufgeführt und der Benutzer wird aufgefordert, einen Startknoten und ein Ziel zu wählen.
@@ -127,59 +128,59 @@ Das Programm ist nun fertig und muss neugestartet werden.
 ## Klassen
 
 ***clsMain***
-- Die Knoten und Kanten sind im Programm "Hardcoded". Da keine weitere Spezifizion in der Aufgabenstellung gegeben war, empfand ich dies als die einfachste Variante.
+- Die Knoten und Kanten sind im Programm "Hardcoded". Da keine weitere Spezifikation in der Aufgabenstellung gegeben war, empfand ich dies als die einfachste Variante.
 - Das zu implementierende Interface wurde durch die Konstante eingebunden, welche bei der Initialisierung des Graphen die Distanz jedes Knotens auf maxInteger setzt, da Unendlich nicht setztbar ist.
-- Die classe "Pair" wurde verwendet, um mit Hilfe einer Methode zwei ArrayLists zu initialisieren und direkt zurückzugeben.
-- Um den Algorithmus ausführen zu können und das Konzept von Generics beizubehalten, werden Objektinstanzen des clsDijkstraManagers, welcher den Algorithmus managed, und eines clsGraphen, welcher für das Ausführen des Algorithmus genutzt wird, erzeugt.
+- Die Klasse "Pair" wurde verwendet, um mit Hilfe einer Methode zwei ArrayLists zu initialisieren und direkt zurückzugeben.
+- Um den Algorithmus ausführen zu können und das Konzept von Generics beizubehalten, werden Objektinstanzen des clsDijkstraManagers, welcher den Algorithmus verwaltet, und eines clsGraphen, welcher für das Ausführen des Algorithmus genutzt wird, erzeugt.
 
 -------------------------
 
 ***clsDijkstraManager***
-- clsDijkstraManager implementiert das Interface *maxInteger*, welches genutzt wird, um den noch nicht besuchten Knoten den maximalen Intege-Wert zuzuweisen.
-- clsDijkstraManager nutzt eine HashMap, um den Knoten die vorläufige Distanz zuzuweisen und anschließend mit der alternativen Distanz zu vergleichen
+- clsDijkstraManager implementiert das Interface *maxInteger*, welches genutzt wird, um den noch nicht besuchten Knoten den maximalen Integer-Wert zuzuweisen.
+- clsDijkstraManager nutzt eine HashMap, um den Knoten die vorläufige Distanz zuzuweisen und anschließend mit der alternativen Distanz zu vergleichen.
 	- Dies wurde als Antwort auf die Vorraussetzung gewählt, eine Map im Programm zu nutzen.
 - Die Methode "findShortestPath" gehört zwar nicht zum grundlegenden Algorithmus von Dijkstra, jedoch wird sie später zur Ermittlung des kürzesten Weges genutzt.
 
 -------------------------
 
 ***clsVertex***
-- Die Klasse Vertex stellt hier einen Knoten dar
+- Das Objekt, welches aus der Klasse clsVertex generiert wird, stellt einen Knoten dar.
 - Sie enthält die Attribute:
 	- name (Name)
 	- value (Distanz)
 	- before (Vorgänger)
-- Die Klasse besitzt einen Konstruktor, sowie getter und setter, da die Attribute privat sind
+- Die Klasse besitzt einen Konstruktor, sowie getter und setter, da die Attribute privat sind.
 - Die Methode printVertex wurde als debuggTool genutzt. 
-	- Mir ist bewusst, dass es Möglich gewesen wäre, "@Override toString" zu nutzten, jedoch erschien mir die ausgeführte Implementierung zum derzeitigen Zeitpunkt angenehmer, da der Name für mich klarer erkennen ließ, wofür die Methode gedacht ist.
+	- Mir ist bewusst, dass es Möglich gewesen wäre, "@Override toString" zu nutzen, jedoch erschien mir die ausgeführte Implementierung zum derzeitigen Zeitpunkt übersichtlicher, da der Name für mich klarer erkennen ließ, wofür die Methode gedacht ist.
 
 -------------------------
 
 ***clsEdge***
-- Die Klasse Vertex stellt hier eine Kante dar
+- Das Objekt, welches aus der Klasse clsEdges generiert wird, stellt eine Kante dar.
 - Sie enthält die Attribute:
 	- start (Startknoten)
 	- end (Zielknoten)
 	- distance (Kantengewicht)
-- Die Klasse besitzt einen Konstruktor, sowie getter und setter, da die Attribute privat sind
+- Die Klasse besitzt einen Konstruktor, sowie getter und setter, da die Attribute privat sind.
 - Die Methode printEdge wurde als debuggTool genutzt. 
-	- Mir ist bewusst, dass es Möglich gewesen wäre, "@Override toString" zu nutzten, jedoch erschien mir die ausgeführte Implementierung zum derzeitigen Zeitpunkt angenehmer, da der Name für mich klarer erkennen ließ, wofür die Methode gedacht ist.
+	- Mir ist bewusst, dass es Möglich gewesen wäre, "@Override toString" zu nutzen, jedoch erschien mir die ausgeführte Implementierung zum derzeitigen Zeitpunkt übersichtlicher, da der Name für mich klarer erkennen ließ, wofür die Methode gedacht ist.
 
 -------------------------
 
 ***clsGraph***
-- Die Klasse Graph stellt den Graphen dar
+- Das Objekt, welches aus der Klasse clsGraph generiert wird, stellt den Graph dar.
 - Sie enthält die Attribute:
 	- edges (Kanten)
 	- vertex (Knoten)
-- Die Klasse besitzt einen Konstruktor
+- Die Klasse besitzt einen Konstruktor.
 
 -------------------------
 
 ## Interface
 
 ***maxInteger***
-- Das genutzte Interface implementiert den maximalen Integerwert durch Integer.MAX_VALUE
-- Es wird sowohl in clsMain, als auch in clsDijkstraManager implementiert
+- Das genutzte Interface implementiert den maximalen Integerwert durch Integer.MAX_VALUE.
+- Es wird sowohl in clsMain, als auch in clsDijkstraManager implementiert.
 
 -------------------------
 -------------
@@ -191,18 +192,18 @@ Das Programm ist nun fertig und muss neugestartet werden.
 -------------
 # Testdokumentation
 
-**Ausgeführte Tests - Hierbei wird nur start, end und distance dokumentiert. Die Ausgabe der zu besuchenden Städte auf dem Weg wird, um Platz zu sparen, weggelassen**
+**Ausgeführte Tests - Hierbei wird nur start, end und distance dokumentiert. Die Ausgabe der zu besuchenden Städte auf dem Weg wird, um Platz zu sparen, ausgelassen**
 
 ![Tabel](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/Dijkstra/Testing.png "Testing")
 
 -------------------------
 -------------
 # UML-Diagramme
-*Hierbei wird nur ein Klassendiagramm und ein Aktivitätsdiagramm genutzt, da andere UML-Arten keine besonderen Cases abdecken*
+*Hierbei wird nur ein Klassendiagramm, ein Aktivitätsdiagramm und ein UseCase-Diagramm genutzt, da andere UML-Arten keine besonderen Cases abdecken*
 
-## Klassendiagram
+## Klassendiagramm
 
-![Class Diagram](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/Dijkstra/ClassDG.png "ClassDG")
+![ClassDiagram](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/Dijkstra/ClassDG.png "ClassDG")
 
 -------------------------
 
@@ -250,8 +251,8 @@ Das Programm ist nun fertig und muss neugestartet werden.
 	- private int distance
 - Methoden:
 	- Konstruktor
-	- getter/Setter
-	- public void printEdge() - debuggTool
+	- getter/setter
+	- public void printEdge() - debugTool
 	
 -------------------------
 	
@@ -262,8 +263,8 @@ Das Programm ist nun fertig und muss neugestartet werden.
     - private clsVertex<T> before
 - Methoden:
 	- Konstruktor
-	- getter/Setter
-	- public void printVertex() - debuggTool
+	- getter/setter
+	- public void printVertex() - debugTool
 	
 -------------------------
 	
