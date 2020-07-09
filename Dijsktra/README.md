@@ -214,7 +214,7 @@ Das Programm ist nun fertig und muss neugestartet werden.
 -------------------------
 
 ## UseCase Diagramm
-![UseCase](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/Dijkstra/UseCaseDG.png "UseCaseDG")
+![UseCase](https://raw.githubusercontent.com/MoritzMueller2508/JavaProject/master/PicturesDocumentation/Dijkstra/UseCase.png "UseCaseDG")
 -------------
 
 
@@ -300,12 +300,12 @@ Das Programm ist nun fertig und muss neugestartet werden.
 >***Der Dijkstra-Algorithmus ist ein Algorithmus aus der Klasse der Greedy-Algorithmen und löst das Problem der kürzesten Pfade für einen gegebenen Startknoten***
 
 Der Algorithmus wird dann angewandt, wenn ein kürzester Pfad aus einem gegeben Graphen gesucht ist. Dabei ist der Graph kantengewichtet.\
-Jedoch ist darauf zu achten, dass die Kanten keine negative Kantengewichtung enthalten. Sollte dies doch der Fall sein, ist der Algorithmus von Dijkstra nicht mehr anwendbar.
-Stattdessen wird in diesem Fall auf den Bellman-Ford-Algorithmus zurückgegriffen, da dieser auch mit negativen Kantengewichtungen umgehen kann.
+Jedoch ist darauf zu achten, dass die Kanten keine negative Kantengewichtung enthalten. Sollte dies jedoch der Fall sein, ist der Algorithmus von Dijkstra nicht mehr anwendbar.
+Stattdessen wird in diesem Fall empfohlen, auf den Bellman-Ford-Algorithmus zurückzugreifen, da dieser auch mit negativen Kantengewichtungen umgehen kann.
 
 **Greedy-Algorithmen oder auch gierige Algorithmen, bilden eine spezielle Klasse von Algorithmen in der Informatik.**
 
-Hierbei ist die Lösung eines Greedy-Algorithmus nicht immer die optimale Lösung, da immer die aktuell beste Entscheidung gewählt wird, ohne jedoch auf Vorherige oder Auswirkungen dieser Entscheidung zu achten.
+Hierbei ist die Lösung eines Greedy-Algorithmus nicht immer die optimale Lösung, da immer die aktuell beste Entscheidung gewählt wird, ohne jedoch auf vorherige Entscheidungen oder Auswirkungen dieser zu achten.
 
 >Greedy-Algorithmen berechnen jeweils ein "lokales Optimum" in jedem Schritt und können daher eventuell ein "globales Optimum" verpassen.
 
@@ -315,10 +315,10 @@ Algorithmen, welche dazu ausgelegt sind das kürzeste-Wege-Problem zu lösen, al
 Dadurch ist ein Vorteil eines Greedy-Algorithmus entgegen anderen Algorithmen, dass ein Greedy-Algorithmus schnell eine Lösung findet, während andere Algorithmen eventuell kein Ergebnis in endlicher Zeit liefern können. 
 
 Allgemein weisen Greedy-Algorithmen fünf Komponenten auf:
-1. Eine Kandidatenmenge, aus der eine Lösung erzeugt wird
-2. Eine Auswahlfunktion, die den besten Kandidaten wählt, der der Lösung hinzugefügt werden soll
-3. Eine Tauglichkeitsfunktion, die verwendet wird, um zu bestimmen, ob ein Kandidat dazu taugt, zu einer Lösung beizutragen
-4. Eine objektive Funktion, die einer Lösung oder Teillösung einen Wert zuweist
+1. Eine Kandidatenmenge, aus der eine Lösung erzeugt wird.
+2. Eine Auswahlfunktion, die den besten Kandidaten wählt, welcher der Lösung hinzugefügt werden soll.
+3. Eine Tauglichkeitsfunktion, die verwendet wird, um zu bestimmen, ob ein Kandidat dazu taugt, zu einer Lösung beizutragen.
+4. Eine objektive Funktion, die einer Lösung oder Teillösung einen Wert zuweist.
 5. Eine Lösungsfunktion, die anzeigt, dass der Nutzer eine vollständige Lösung entdeckt hat.
 
 
@@ -339,17 +339,18 @@ Die beste Möglichkeit um in möglichst wenigen Schritten das Ziel zu erreichen 
 3. 5€
 
 Der Greedy-Algorithmus benötigt also zwei Teilschritte mehr, obwohl er pro Schritt die beste Lösung wählt.
+Das Ergebnis bleibt das gleiche, jedoch ist die Methode des Greedy-Algorithmus ineffizienter als die bestmögliche Ausführung.
 
 
 --------------------------
-### Wie könnten Sie Ihre Lösung erweitern, so dass nicht nur der kürzeste Weg, sondern auch der ökologisch beste Weg (”Green Route”) ermitteln werden kann?
-### Was mussten Sie hierfür an Ihrem Programm ändern/erweitern?
+### Wie könnten Sie Ihre Lösung erweitern, so dass nicht nur der kürzeste Weg, sondern auch der ökologisch beste Weg (”Green Route”) ermittelt werden kann?
+### Was müssten Sie hierfür an Ihrem Programm ändern/erweitern?
 
 
 Um den ökologisch sinnvollsten Weg wählen zu können, muss eine "Umweltgewichtung" eingeführt werden.\
 Da der Dijkstra-Algorithmus in einem gewichteten Graphen ausgeführt wird, müssen hierbei die Kantengewichtungen neu definiert werden.
 
-Während der herkömmliche Dijkstra-Algorithmus den kürzesten Weg abruft, die Gewichtung sich also in der Entfernung der verschiedenen Knoten zueinander wiederspiegelt (oder vielleicht auch die genutzte Zeit), muss für die Gewichtung der Kanten eine neue Einheit und somit neue Werte gewählt werden.\
+Während der herkömmliche Dijkstra-Algorithmus den kürzesten Weg abruft, die Gewichtung sich also in der Entfernung der verschiedenen Knoten zueinander wiederspiegelt (oder die genutzte Zeit), muss für die Gewichtung der Kanten eine neue Einheit und somit neue Werte gewählt werden.\
 Eine Möglichkeit wäre, die Einheit "CO²-Ausstoß (Tonnen)" pro Weg zu nutzen. 
 
 Somit würde, beispielsweise, eine Reise mit dem Flugzeug zwar viel Zeit sparen, jedoch drastische Ausmaße für die "GreenRoute" annehmen.
@@ -357,14 +358,14 @@ Die ökologisch sinnvollere Route wäre es hingegen, eine andere Route zu wähle
 Somit ist die GreenRoute nicht immer die schnellste Route. 
 
 
-Um die GreenRoute in das Programm zu implementieren, müsste abgefragt werden, welche Version des Algorithmus der Nutzer wählen möchte.\
+Um die GreenRoute in das Programm zu implementieren, müsste abgefragt werden, welche Version des Algorithmus der Nutzer ausführen möchte.\
 Abhängig von der gewählten Option müssen die Kanten mit einer anderen Gewichtung initialisiert werden.
 
 Bei genauer Sicht auf mein Programm, würde ich eine zweite ArrayList bereitstellen, welche die Kanten mit eben genannter Umweltgewichtung enthält.
 Abhängig von der gewählten Option wird eine von beiden bereitgestellten ArrayLists genutzt, um den Graphen zu initialisieren.
 
 ----------------------------
-Quellen: 
+Quellen (Aufgaben): 
 - https://www.bigdata-insider.de/der-greedy-algorithmus-a-843043/
 - https://de.wikipedia.org/wiki/Greedy-Algorithmus
 - https://www-m9.ma.tum.de/graph-algorithms/spp-dijkstra/index_de.html
