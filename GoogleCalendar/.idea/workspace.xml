@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fb6649e-33a7-4222-a201-4cdbde8b5518" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dijsktra/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsDijkstraManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsDijkstraManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsEdge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsVertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/clsVertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/maxInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dijsktra/src/Djirkstra/maxInteger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,6 +235,7 @@
       <workItem from="1594217175519" duration="2232000" />
       <workItem from="1594303976198" duration="59000" />
       <workItem from="1594330102077" duration="83000" />
+      <workItem from="1594330980349" duration="612000" />
     </task>
     <servers />
   </component>

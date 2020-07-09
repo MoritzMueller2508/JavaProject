@@ -1,5 +1,10 @@
 package Djirkstra;
 
+/** The class clsVertex consists out of a name, a value and a "Vorgänger", the Node, which was visited before
+ *
+ *
+ * @param <T>
+ */
 public class clsVertex<T> {
 
     private T name;
@@ -7,13 +12,22 @@ public class clsVertex<T> {
     private clsVertex<T> before;
 
 
-
+    /** Constructor
+     *
+     *
+     * @param name
+     * @param value
+     */
     public clsVertex(T name, int value) {
         this.name = name;
         this.value = value;
         this.before = null;
     }
 
+    /** Getter and Setter
+     *
+     * @return
+     */
     public T getName() {
         return name;
     }
@@ -34,6 +48,9 @@ public class clsVertex<T> {
 
     public void setBefore(clsVertex<T> before) { this.before = before; }
 
+    /**DebugTool
+     *
+     */
     public void printVertex(){
         System.out.println(getName());
         System.out.println(getValue());

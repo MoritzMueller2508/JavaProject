@@ -81,6 +81,13 @@ public class clsMain implements maxInteger {
 
     }
 
+    /** Initializes two ArrayLists
+     *
+     *  One for all Objects of clsEdge
+     *  One for all Objects of clsVertex
+     *
+     * @return
+     */
     private static Pair<ArrayList<clsVertex<String>>, ArrayList<clsEdge<String>>> initialize(){
 
         String[] cities = {"Frankfurt", "Mannheim", "Karlsruhe", "Augsburg", "Muenchen", "Kassel", "Nuernberg", "Stuttgart", "Wuerzburg", "Erfurt"};
@@ -155,6 +162,10 @@ public class clsMain implements maxInteger {
 
     }
 
+    /** Just a basic method to iterate through an ArrayList
+     *
+     * @param nodes
+     */
     private static void printArrayList(ArrayList<clsVertex<String>> nodes){
 
         for (clsVertex<String> node:nodes
@@ -164,6 +175,12 @@ public class clsMain implements maxInteger {
         }
     }
 
+    /** Find the Vertex which is set as starting point
+     *
+     * @param sP
+     * @param nodes
+     * @return
+     */
     private static clsVertex<String> getStartingPoint(String sP, ArrayList<clsVertex<String>> nodes){
         Error error = new Error("The city you selected as startPoint does not exist");
 
@@ -176,6 +193,12 @@ public class clsMain implements maxInteger {
 
     }
 
+    /** Finds the Vertex, which is set as destination
+     *
+     * @param dT
+     * @param nodes
+     * @return
+     */
     private static clsVertex<String> getDestination(String dT, ArrayList<clsVertex<String>> nodes){
         Error error = new Error("The city you selected as destination does not exist");
 
