@@ -290,19 +290,87 @@ Das Programm ist nun fertig und muss neugestartet werden.
 - https://www-m9.ma.tum.de/graph-algorithms/spp-dijkstra/index_de.html
 - https://de.wikipedia.org/wiki/Dijkstra-Algorithmus
 
-# JavaProjectWork
-
-This is my JavaProjectWork for university. 
-This project will be my evaluation in the programmingInJava lecture.
-In order to pass this semester, I need 56% in Java, to get 100% in C and Java combined.
-
-So... Let's do this
 
 
-You can start the project with your command prompt.
-To do so, just type navigate to the folder JavaHausarbeit\out\artifacts and start the JavaHausarbeit.jar in the commandPromt or powerShell.
-You will then be asked, on which point you want to start, and what your destination should be. You can choose out of existing cities.
+# Weitere Fragen
+
+### Nach welchem Prinzip arbeitet der Algorithmus von Dijkstra? Erläutern Sie.
+
+>***Der Dijkstra-Algorithmus ist ein Algorithmus aus der Klasse der Greedy-Algorithmen und löst das Problem der kürzesten Pfade für einen gegebenen Startknoten***
+
+Der Algorithmus wird dann angewandt, wenn ein kürzester Pfad aus einem gegeben Graphen gesucht ist. Dabei ist der Graph kantengewichtet.\
+Jedoch ist darauf zu achten, dass die Kanten keine negative Kantengewichtung enthalten. Sollte dies doch der Fall sein, ist der Algorithmus von Dijkstra nicht mehr anwendbar.
+Stattdessen wird in diesem Fall auf den Bellman-Ford-Algorithmus zurückgegriffen, da dieser auch mit negativen Kantengewichtungen umgehen kann.
+
+**Greedy-Algorithmen oder auch gierige Algorithmen, bilden eine spezielle Klasse von Algorithmen in der Informatik.**
+
+Hierbei ist die Lösung eines Greedy-Algorithmus nicht immer die optimale Lösung, da immer die aktuell beste Entscheidung gewählt wird, ohne jedoch auf Vorherige oder Auswirkungen dieser Entscheidung zu achten.
+
+>Greedy-Algorithmen berechnen jeweils ein "lokales Optimum" in jedem Schritt und können daher eventuell ein "globales Optimum" verpassen.
+
+Da ein Greedy-Algorithmus immer nur die aktuell beste Entscheidung trifft, ist die Laufzeit eines solchen Algorithmus verhältnismäßig gering. 
+
+Algorithmen, welche dazu ausgelegt sind das kürzeste-Wege-Problem zu lösen, allerdings nicht der Klasse der Greedy-Algorithmen angehören, müssen pro getroffener Entscheidung den vollständigen Graphen durchlaufen.
+Dadurch ist ein Vorteil eines Greedy-Algorithmus entgegen anderen Algorithmen, dass ein Greedy-Algorithmus schnell eine Lösung findet, während andere Algorithmen eventuell kein Ergebnis in endlicher Zeit liefern können. 
+
+Allgemein weisen Greedy-Algorithmen fünf Komponenten auf:
+1. Eine Kandidatenmenge, aus der eine Lösung erzeugt wird
+2. Eine Auswahlfunktion, die den besten Kandidaten wählt, der der Lösung hinzugefügt werden soll
+3. Eine Tauglichkeitsfunktion, die verwendet wird, um zu bestimmen, ob ein Kandidat dazu taugt, zu einer Lösung beizutragen
+4. Eine objektive Funktion, die einer Lösung oder Teillösung einen Wert zuweist
+5. Eine Lösungsfunktion, die anzeigt, dass der Nutzer eine vollständige Lösung entdeckt hat.
 
 
-ToDO: Write methode to add cities and paths.
+**Ein Beispiel:**
+
+Aus einem Geldpool soll eine Menge von 15€ entnommen werden. Der Geldpool besteht aus 11-, 5- und 1- Euro-Wertmarken.\
+Ein Greedy-Algorithmus würde pro Schritt die beste Lösung wählen, also den höchsten Wert vom Geldpool abziehen. Die befolgten Schritte wären dementsprechend:
+1. 11€
+2. 1€
+3. 1€
+4. 1€
+5. 1€
+
+Somit hätte der Algorithmus in 5 Schritten sein Ziel erreicht.
+Die beste Möglichkeit um in möglichst wenigen Schritten das Ziel zu erreichen ist jedoch:
+1. 5€
+2. 5€
+3. 5€
+
+Der Greedy-Algorithmus benötigt also zwei Teilschritte mehr, obwohl er pro Schritt die beste Lösung wählt.
+
+
+--------------------------
+### Wie könnten Sie Ihre Lösung erweitern, so dass nicht nur der kürzeste Weg, sondern auch der ökologisch beste Weg (”Green Route”) ermitteln werden kann?
+### Was mussten Sie hierfür an Ihrem Programm ändern/erweitern?
+
+
+Um den ökologisch sinnvollsten Weg wählen zu können, muss eine "Umweltgewichtung" eingeführt werden.\
+Da der Dijkstra-Algorithmus in einem gewichteten Graphen ausgeführt wird, müssen hierbei die Kantengewichtungen neu definiert werden.
+
+Während der herkömmliche Dijkstra-Algorithmus den kürzesten Weg abruft, die Gewichtung sich also in der Entfernung der verschiedenen Knoten zueinander wiederspiegelt (oder vielleicht auch die genutzte Zeit), muss für die Gewichtung der Kanten eine neue Einheit und somit neue Werte gewählt werden.\
+Eine Möglichkeit wäre, die Einheit "CO²-Ausstoß (Tonnen)" pro Weg zu nutzen. 
+
+Somit würde, beispielsweise, eine Reise mit dem Flugzeug zwar viel Zeit sparen, jedoch drastische Ausmaße für die "GreenRoute" annehmen.
+Die ökologisch sinnvollere Route wäre es hingegen, eine andere Route zu wählen, die eventuell ohne ein Fahrzeug bewältigt werden kann, auch wenn sie um ein Vielfaches länger dauert.
+Somit ist die GreenRoute nicht immer die schnellste Route. 
+
+
+Um die GreenRoute in das Programm zu implementieren, müsste abgefragt werden, welche Version des Algorithmus der Nutzer wählen möchte.\
+Abhängig von der gewählten Option müssen die Kanten mit einer anderen Gewichtung initialisiert werden.
+
+Bei genauer Sicht auf mein Programm, würde ich eine zweite ArrayList bereitstellen, welche die Kanten mit eben genannter Umweltgewichtung enthält.
+Abhängig von der gewählten Option wird eine von beiden bereitgestellten ArrayLists genutzt, um den Graphen zu initialisieren.
+
+----------------------------
+Quellen: 
+- https://www.bigdata-insider.de/der-greedy-algorithmus-a-843043/
+- https://de.wikipedia.org/wiki/Greedy-Algorithmus
+- https://www-m9.ma.tum.de/graph-algorithms/spp-dijkstra/index_de.html
+
+
+
+
+
+
 
