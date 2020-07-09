@@ -2,7 +2,7 @@
 ***Diese Dokumentation wurde in Markdown verfasst, um sie im GitReposity als Readme einzubinden***\
 ***Es wird empfohlen, diese Readme auch im GitReposity zu betrachten: https://github.com/MoritzMueller2508/JavaProject***
 
-
+*Diese Dokumentation bezieht sich nur auf den ersten Teil der GoogleCalendar Aufgabe*
 -------------
 
 
